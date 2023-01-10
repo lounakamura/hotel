@@ -21,13 +21,23 @@
     <header>
         <div class='header-bg'>
             <div class='header-logo-container'>
-                <div class='header-logo-bg'>
-                    <h1>The Roosevelt Hotel</h1>
-                    <!-- ok so i want some parallax snapping -->
-                </div>
+                <img src='images/ui/logo.svg'>
+                <h1>The Roosevelt Hotel</h1>
+                <!-- ok so i want some parallax snapping -->
             </div>
-        <div>
+            <div class='hamburger-icon'>
+                <div class='hamburger-shape'></div>
+                <div class='hamburger-shape'></div>
+                <div class='hamburger-shape'></div>
+            </div>
+        </div>
     </header>
+    <main>
+        <div class='main-first'></div>
+        <div class='decorative-border-container'>
+            <div class='decorative-border'></div>
+        </div>
+    </main>
 </body>
 </html>
 
