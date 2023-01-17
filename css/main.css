@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap');
 
+/* Global */
+
 body {
     margin: 0;
     padding: 0;
@@ -16,9 +18,13 @@ body {
     box-sizing: border-box;
 }
 
+/* Additional */
+
 .hidden {
     visibility: hidden;
 }
+
+/* Header */
 
 .header-bg {
     position: fixed;
@@ -33,6 +39,8 @@ body {
     backdrop-filter: blur(2px);
     z-index: 15;
 }
+
+/* Logo */
 
 .header-logo-container {
     display: flex;
@@ -60,53 +68,16 @@ body {
     pointer-events: none;
 }
 
-div.main-section {
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    --height: 100vh;
-    height: var(--height);
-}
+/* Book now button */
 
-.main-section:nth-child(1){
-    top: 0;
-    background-image: url('../images/photos/main1.jpg');
-}
-
-.main-section:nth-child(2){
-    top: var(--height);
-    background-image: url('../images/photos/main1.jpg');
-}
-
-.main-section:nth-child(3){
-    top: calc(2*var(--height));
-    background-image: url('../images/photos/main1.jpg');
-}
-
-/* Decorative golden border */
-
-.decorative-border-container {
-    position: absolute;
-    top: 0;
-    padding-top: 150px;
-    padding-bottom: 125px;
-    padding-left: 200px;
-    padding-right: 200px;
-    width: 100%;
-    height: 100vh;
-    z-index: 5;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-}
-
-.decorative-border {
-    border-width: 5px;
-    border-style: solid;
-    border-image: url('../images/deco/gold.jpg') 15 stretch;
-    height: 100%;
-    width: 100%;
-    animation: slide-in-bck-center 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.header-book-button {
+    background-color: #f7f6f4;
+    border: none;
+    border-radius: 2px;
+    height: 35px;
+    width: 110px;
+    text-transform: uppercase;
+    color: black;
 }
 
 /* Hamburger/cross icon */
@@ -183,9 +154,57 @@ div.main-section {
     z-index: 10;
 }
 
+/* Main */
 
+.main-section {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    --height: 100vh;
+    height: var(--height);
+}
 
+.main-section:nth-child(1){
+    top: 0;
+    background-image: url('../images/photos/main1.jpg');
+}
 
+.main-section:nth-child(2){
+    top: var(--height);
+    background-image: url('../images/photos/main2.jpg');
+}
+
+.main-section:nth-child(3){
+    top: calc(2*var(--height));
+    background-image: url('../images/photos/main3.jpg');
+}
+
+/* Decorative golden border */
+
+.decorative-border-container {
+    position: absolute;
+    top: 0;
+    padding-top: 150px;
+    padding-bottom: 125px;
+    padding-left: 200px;
+    padding-right: 200px;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.decorative-border {
+    border-width: 5px;
+    border-style: solid;
+    border-image: url('../images/deco/gold.jpg') 15 stretch;
+    height: 100%;
+    width: 100%;
+    animation: slide-in-bck-center 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 /* Animations */
 

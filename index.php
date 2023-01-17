@@ -25,6 +25,9 @@
                 <h1>The Roosevelt Hotel</h1>
                 <!-- ok so i want some parallax snapping -->
             </div>
+            <div class='header-book-container'>
+                <button class='header-book-button'>Book now</button>
+            </div>
             <div class='hamburger-icon'>
                 <div></div>
                 <div></div>
@@ -39,13 +42,18 @@
     </nav>
 
     <main>
-        <div class='main-section'></div>
-        <div class='main-section'></div>
-        <div class='main-section'></div>
+        <div class='main-container'>
+            <div class='main-section'></div>
+            <div class='main-section'></div>
+            <div class='main-section'></div>
+        </div>
+    </main>
+
+    <section>
         <div class='decorative-border-container'>
             <div class='decorative-border'></div>
         </div>
-    </main>
+    </section>
 
     <script src='js/hamburgerMenu.js'></script>
     <script src='js/misc.js'></script>
