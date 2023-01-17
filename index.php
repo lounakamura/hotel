@@ -26,18 +26,29 @@
                 <!-- ok so i want some parallax snapping -->
             </div>
             <div class='hamburger-icon'>
-                <div class='hamburger-shape'></div>
-                <div class='hamburger-shape'></div>
-                <div class='hamburger-shape'></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </header>
+
+    <nav>
+        <div class='hamburger-menu-bg'></div>
+    </nav>
+
     <main>
-        <div class='main-first'></div>
+        <div class='main-section'></div>
+        <div class='main-section'></div>
+        <div class='main-section'></div>
         <div class='decorative-border-container'>
             <div class='decorative-border'></div>
         </div>
     </main>
+
+    <script src='js/hamburgerMenu.js'></script>
+    <script src='js/misc.js'></script>
 </body>
 </html>
 
