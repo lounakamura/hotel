@@ -51,6 +51,8 @@ body {
 
 /* Logo */
 
+/* Logo */
+
 .header-logo-container {
   display: flex;
   align-items: center;
@@ -90,6 +92,8 @@ body {
   text-transform: uppercase;
   color: black;
 }
+
+/* Hamburger/cross icon */
 
 /* Hamburger/cross icon */
 
