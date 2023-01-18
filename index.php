@@ -23,21 +23,49 @@
             <div class='header-logo-container'>
                 <img src='images/ui/logo.svg'>
                 <h1>The Roosevelt Hotel</h1>
-                <!-- ok so i want some parallax snapping -->
             </div>
+            <!-- <div class='header-book-container'>
+                <button class='header-book-button'>Book now</button>
+            </div> -->
             <div class='hamburger-icon'>
-                <div class='hamburger-shape'></div>
-                <div class='hamburger-shape'></div>
-                <div class='hamburger-shape'></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </header>
-    <main>
-        <div class='main-first'></div>
-        <div class='decorative-border-container'>
-            <div class='decorative-border'></div>
+
+    <nav>
+        <div class='hamburger-menu-bg'>
+            <a class='hamburger-menu-option'>Home</a>
+            <a class='hamburger-menu-option'>Accomodation</a>
+            <a class='hamburger-menu-option'>Dining</a>
+            <a class='hamburger-menu-option'>Gallery</a>
+            <a class='hamburger-menu-option'>Contact</a>
         </div>
+    </nav>
+
+    <main class='main-container'>
+        <div class='main-section'>
+            <div class='decorative-border-container'>
+                <div class='decorative-border'></div>
+            </div>
+            <div class='main-content-1'>
+                <h2>Founded in 1984</h2>
+                <h2>The Roosevelt Hotel</h2>
+            </div>
+        </div>
+        <div class='main-section'></div>
+        <div class='main-section'></div>
     </main>
+
+    <section>
+        
+    </section>
+
+    <script src='js/hamburgerMenu.js'></script>
+    <script src='js/misc.js'></script>
 </body>
 </html>
 
