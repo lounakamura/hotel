@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | The Roosevelt Hotel</title>
+    <title>Gallery | The Roosevelt Hotel</title>
     <link rel="icon" type="image/ico" href="images/ui/logo.svg">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.6.1.min.js"></script>
@@ -44,17 +44,6 @@
     </nav>
 
     <main class='main-container'>
-        <div class='main-section'>
-            <div class='decorative-border-container'>
-                <div class='decorative-border'></div>
-            </div>
-            <div class='main-content-1'>
-                <h2>Founded in 1984</h2>
-                <h2>The Roosevelt Hotel</h2>
-            </div>
-        </div>
-        <div class='main-section'></div>
-        <div class='main-section'></div>
     </main>
 
     <script src='js/hamburgerMenu.js'></script>
