@@ -4,15 +4,17 @@ const hamburgerMenu = document.querySelector(".hamburger-menu-bg");
 let menuVisible = false;
 
 hamburgerBtn.onclick = function(){
+    if($(hamburgerMenu).hasClass('hidden')){
+        $(hamburgerMenu).removeClass('hidden');
+    }
+
     if(menuVisible){
         $(hamburgerBtn).removeClass('open');
-        $(hamburgerMenu).addClass("slide-right");
-        $(hamburgerMenu).removeClass("slide-left");
+        $(hamburgerMenu).removeClass('open');
         menuVisible = false;
     } else {
         $(hamburgerBtn).addClass('open');
-        $(hamburgerMenu).addClass("slide-left");
-        $(hamburgerMenu).removeClass("slide-right");
+        $(hamburgerMenu).addClass('open');
         menuVisible = true;
     }
 }

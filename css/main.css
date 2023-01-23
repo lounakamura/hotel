@@ -71,8 +71,8 @@ a:link {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .header-logo-container h1 {
@@ -96,8 +96,8 @@ a:link {
   height: 25px;
   width: 35px;
   cursor: pointer;
-  -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-right 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .hamburger-icon div {
@@ -165,11 +165,18 @@ a:link {
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 25px;
   padding: 20px;
   backdrop-filter: blur(3px);
+  -webkit-animation: slide-right-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.hamburger-menu-bg.open {
+  -webkit-animation: slide-left-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .hamburger-menu-option {
@@ -177,6 +184,28 @@ a:link {
   color: #f7f6f4;
   font-weight: 400;
   font-size: 20px;
+
+}
+
+.hamburger-menu-bg.open .hamburger-menu-option {
+  -webkit-animation: slide-left-option 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left-option 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.hamburger-menu-bg.open .hamburger-menu-option:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.hamburger-menu-bg.open .hamburger-menu-option:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.hamburger-menu-bg.open .hamburger-menu-option:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.hamburger-menu-bg.open .hamburger-menu-option:nth-child(5) {
+  animation-delay: 0.35s;
 }
 
 .hamburger-menu-option.chosen {
@@ -287,21 +316,9 @@ a:link {
   box-shadow: 4px 0px 0px 4px #f7f6f4cc inset;
 }
 
-/* Animations */
-
-.slide-left {
-	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.slide-right {
-	-webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
 /* Keyframes */
 
-@-webkit-keyframes slide-left {
+@-webkit-keyframes slide-left-menu {
     0% {
       -webkit-transform: translateX(0);
               transform: translateX(0);
@@ -312,7 +329,7 @@ a:link {
     }
 }
 
-@keyframes slide-left {
+@keyframes slide-left-menu {
     0% {
       -webkit-transform: translateX(0);
               transform: translateX(0);
@@ -323,7 +340,7 @@ a:link {
     }
 }  
 
-@-webkit-keyframes slide-right {
+@-webkit-keyframes slide-right-menu {
     0% {
       -webkit-transform: translateX(-25vw);
               transform: translateX(-25vw);
@@ -334,7 +351,7 @@ a:link {
     }
 }
 
-@keyframes slide-right {
+@keyframes slide-right-menu {
     0% {
       -webkit-transform: translateX(-25vw);
               transform: translateX(-25vw);
@@ -343,6 +360,52 @@ a:link {
       -webkit-transform: translateX(0);
               transform: translateX(0);
     }
+}  
+
+@-webkit-keyframes slide-left-option {
+  0% {
+    -webkit-transform: translateX(-25vw);
+            transform: translateX(-25vw);
+    
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-left-option {
+  0% {
+    -webkit-transform: translateX(25vw);
+            transform: translateX(25vw);
+    
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}  
+
+@-webkit-keyframes slide-right-option {
+  0% {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  100% {
+    -webkit-transform: translateX(25vw);
+            transform: translateX(25vw);
+  }
+}
+
+@keyframes slide-right-option {
+  0% {
+    -webkit-transform: translateX(0vw);
+            transform: translateX(0vw);
+  }
+  100% {
+    -webkit-transform: translateX(25vw);
+            transform: translateX(25vw);
+  }
 }  
 
 @-webkit-keyframes slide-in-bck-center {
