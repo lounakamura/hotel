@@ -24,6 +24,9 @@
                 <img src='images/ui/logo.svg'>
                 <h1>The Roosevelt Hotel</h1>
             </div>
+            <!-- <div class='header-book-container'>
+                <button class='header-book-button'>Book now</button>
+            </div> -->
             <div class='hamburger-icon'>
                 <div></div>
                 <div></div>
