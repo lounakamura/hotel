@@ -45,16 +45,19 @@
 
     <main class='main-container'>
         <div class='main-section'>
-            <div class='decorative-border-container'>
-                <div class='decorative-border'></div>
-            </div>
-            <div class='main-content-1'>
-                <h2>Founded in 1984</h2>
+            <div class='main-content'>
                 <h2>The Roosevelt Hotel</h2>
+                <h3>Luxury within the reach of your hand</h3>
             </div>
         </div>
-        <div class='main-section'></div>
-        <div class='main-section'></div>
+        <div class='main-section'>
+            <div class='book-now-container'>
+                <a class='book-now-button'>Book now</a>
+            </div>
+        </div>
+        <div class='main-section'>
+
+        </div>
     </main>
 
     <script src='js/hamburgerMenu.js'></script>

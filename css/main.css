@@ -1,10 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Fonts */
+
+  /* Logo */
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap');
+
+  /* Headers */
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
+
+  /* Regular text */
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+  /* Deco handwriting */
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 /* Colors */
 
-/* Off-white: #f7f6f4 */
+  /* Font: #f7f6f4 */
+
+  /* Background: #ece9e2 */
 
 /* Global */
 
@@ -18,6 +30,10 @@ body {
   font-family: 'Work Sans', sans-serif;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
+}
+
+main {
+  background-color: #ece9e2;
 }
 
 * {
@@ -35,6 +51,10 @@ a:-webkit-any-link {
 
 a:link {
   text-decoration: none;
+}
+
+input {
+  border: none;
 }
 
 /* Additional */
@@ -78,6 +98,7 @@ a:link {
 .header-logo-container h1 {
   font-size: 27px;
   margin: 10px;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
 }
 
 .header-logo-container img {
@@ -154,7 +175,7 @@ a:link {
 /* Hamburger menu */
 
 .hamburger-menu-bg {
-  background-color: rgba(0, 0, 0, 0.445);
+  background-color: #00000071;
   width: 20vw;
   height: 100%;
   position: fixed;
@@ -180,11 +201,15 @@ a:link {
 }
 
 .hamburger-menu-option {
+  display: inline-block;
   text-transform: uppercase;
   color: #f7f6f4;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 21px;
+}
 
+.hamburger-menu-option:hover {
+  transform: scale(1.1);
 }
 
 .hamburger-menu-bg.open .hamburger-menu-option {
@@ -209,7 +234,7 @@ a:link {
 }
 
 .hamburger-menu-option.chosen {
-  border-bottom: 2px solid #f7f6f4;
+  border-bottom: 2px solid #e3dfd6;
 }
 
 /* Main */
@@ -221,58 +246,85 @@ a:link {
 }
 
 .main-section {
-  scroll-padding-top: 10vh;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
+}
+
+.main-section:nth-child(1) {
+  background-image: url('../images/bg/main_bg1.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-section:nth-child(2) {
+  height: 50vh;
+  background-image: url('../images/bg/main_bg2.png');
+  background-size: contain;
   background-position: center;
-  width: 100%;
-  height: 100vh;
-  -webkit-box-shadow: inset 0px 0px 74px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: inset 0px 0px 74px 0px rgba(0, 0, 0, 1);
-  box-shadow: inset 0px 0px 74px 0px rgba(0, 0, 0, 1);
+  background-repeat: repeat;
 }
 
-.main-section:nth-child(1){
-  background-image: url('../images/photos/main1.jpg');
+.main-section:nth-child(3) {
+  background-image: url('../images/bg/main_bg3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
 }
 
-.main-section:nth-child(2){
-  background-image: url('../images/photos/main2.jpg');
-}
 
-.main-section:nth-child(3){
-  background-image: url('../images/photos/main3.jpg');
-}
+/* Main header 1 */
 
-.main-content-1 h2 {
-  font-family: 'Cinzel', serif;
+.main-content {
+  position: absolute;
+  bottom: 5vh;
+  left: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: #f7f6f4;
-  font-weight: 400;
+  font-family: 'Cinzel', cursive;
+  text-shadow: 6px 6px 6px rgba(0, 0, 0, 1);
+  user-select: none;
+  text-align: start;
 }
 
-/* Decorative golden border */
-
-.decorative-border-container {
-  padding-top: 110px;
-  padding-bottom: 110px;
-  padding-left: 200px;
-  padding-right: 200px;
-  width: 100%;
-  height: 100vh;
-  z-index: 5;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  overflow: hidden;
+.main-content h2  {
+  font-style: italic;
+  font-size: 60px;
+  font-weight: 500;
 }
 
-.decorative-border {
-  border-width: 5px;
-  border-style: solid;
-  border-image: url('../images/deco/gold.jpg') 15 stretch;
-  height: 100%;
+.main-content h3  {
+  text-indent: 1em;
+  font-size: 40px;
+  font-weight: 500;
   width: 100%;
-  -webkit-animation: slide-in-bck-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: slide-in-bck-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Book button */
+
+.book-now-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 60px;
+  border-radius: 5px;
+  backdrop-filter: blur(1px);
+  color: #f7f6f4;
+  border: 1px solid #f7f6f4;
+  font-size: 23px;
+  font-weight: 500;
 }
 
 /* Custom scrollbar */
@@ -366,11 +418,6 @@ a:link {
   0% {
     -webkit-transform: translateX(-25vw);
             transform: translateX(-25vw);
-    
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
 }
 
@@ -378,11 +425,6 @@ a:link {
   0% {
     -webkit-transform: translateX(25vw);
             transform: translateX(25vw);
-    
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
 }  
 
