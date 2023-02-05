@@ -4,6 +4,13 @@
     require_once "config.php";
 
     $connection = new mysqli ($servername, $username, $password, $database);
+
+    $rooms = [];
+
+    $query = "SELECT * FROM room";
+    $result = $connection->query($query);
+    fetchAllToArray($rooms, $result);
+    $result->free();
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +22,7 @@
     <title>Accomodation | The Roosevelt Hotel</title>
     <link rel="icon" type="image/ico" href="images/ui/logo.svg">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/accomodation.css">
     <script src="js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
@@ -34,7 +42,7 @@
     </header>
 
     <nav>
-        <div class='hamburger-menu-bg'>
+        <div class='hamburger-menu-bg hidden'>
             <a class='hamburger-menu-option' href='index.php'>Home</a>
             <a class='hamburger-menu-option' href='accomodation.php'>Accomodation</a>
             <a class='hamburger-menu-option' href='dining.php'>Dining</a>
@@ -44,10 +52,48 @@
     </nav>
 
     <main class='main-container'>
+        <div class='main-section'>
+            <div class='main-content'>
+                <h2>Accomodation</h2>
+                <h3>Explore our choice of rooms</h3>
+            </div>
+        </div>
+        <div class='main-section'>
+            <?php 
+                foreach ( $rooms as $room ) {
+                    echo "
+                        <div class='content-section'>
+                            <div class='gallery'>
+                                <div class='arrow-left'>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class='gallery-container'>";
+                                    $dir = "images/accomodation/".$room['room_id']."/";
+                                    $images = glob($dir."*.jpg");
+                                    
+                                    foreach($images as $image) {
+                                        echo "
+                                        <div class='gallery-photo'>
+                                            <img src='".$image."'>
+                                        </div>";
+                                    }
+                            echo "
+                                </div>
+                                <div class='arrow-right'>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <h2>".$room['name']."</h2>
+                        </div>";
+                }
+            ?>
     </main>
 
     <script src='js/hamburgerMenu.js'></script>
     <script src='js/misc.js'></script>
+    <script src='js/accomodationGallery.js'></script>
 </body>
 </html>
 

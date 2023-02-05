@@ -15,6 +15,7 @@
     <title>Gallery | The Roosevelt Hotel</title>
     <link rel="icon" type="image/ico" href="images/ui/logo.svg">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <script src="js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
@@ -34,7 +35,7 @@
     </header>
 
     <nav>
-        <div class='hamburger-menu-bg'>
+        <div class='hamburger-menu-bg hidden'>
             <a class='hamburger-menu-option' href='index.php'>Home</a>
             <a class='hamburger-menu-option' href='accomodation.php'>Accomodation</a>
             <a class='hamburger-menu-option' href='dining.php'>Dining</a>
@@ -44,6 +45,12 @@
     </nav>
 
     <main class='main-container'>
+        <div class='main-section'>
+            <div class='main-content'>
+                <h2>Gallery</h2>
+                <h3>Take a closer look at The Roosevelt Hotel</h3>
+            </div>
+        </div>   
     </main>
 
     <script src='js/hamburgerMenu.js'></script>

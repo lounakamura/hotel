@@ -1,0 +1,13 @@
+.main-section:nth-child(1) {
+    background-image: url('../images/bg/home/bg1.jpg');
+}
+
+.main-section:nth-child(2) {
+    background-image: url('../images/bg/home/bg2.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.main-section:nth-child(3) {
+    background-image: url('../images/bg/home/bg3.jpg');
+}

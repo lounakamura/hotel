@@ -15,6 +15,7 @@
     <title>Home | The Roosevelt Hotel</title>
     <link rel="icon" type="image/ico" href="images/ui/logo.svg">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
     <script src="js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
