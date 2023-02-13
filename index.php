@@ -59,7 +59,12 @@
         <div class='main-section'>
 
         </div>
+        
+        <footer>
+            <span>© 2023 The Roosevelt Hotel</span>
+        </footer>
     </main>
+
 
     <script src='js/hamburgerMenu.js'></script>
     <script src='js/misc.js'></script>

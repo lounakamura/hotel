@@ -50,7 +50,11 @@
                 <h2>Gallery</h2>
                 <h3>Take a closer look at The Roosevelt Hotel</h3>
             </div>
-        </div>   
+        </div>
+        
+        <footer>
+            <span>© 2023 The Roosevelt Hotel</span>
+        </footer>
     </main>
 
     <script src='js/hamburgerMenu.js'></script>

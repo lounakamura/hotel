@@ -7,7 +7,7 @@
 
     $rooms = [];
 
-    $query = "SELECT * FROM room";
+    $query = "SELECT * FROM room_type";
     $result = $connection->query($query);
     fetchAllToArray($rooms, $result);
     $result->free();
@@ -59,6 +59,10 @@
             </div>
         </div>
         <div class='main-section'>
+            <div class='content-section'>
+                <h4>Rooms & Suites</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt lectus. Etiam congue ipsum sed lectus semper, non commodo purus dapibus. Aliquam ultricies dui suscipit augue commodo, sit amet feugiat odio vestibulum. Duis facilisis molestie nisi interdum condimentum. Quisque consectetur fermentum lacus at aliquet. </p>
+            </div>
             <?php 
                 foreach ( $rooms as $room ) {
                     echo "
@@ -85,10 +89,27 @@
                                     <span></span>
                                 </div>
                             </div>
-                            <h2>".$room['name']."</h2>
+                            <div class='gallery-header'>
+                                <h5>".$room['name']."</h5>
+                            </div>
+                            <div class='description'>
+                                <span><img src='images/ui/people-svgrepo-com.svg'></img><span>".$room['guests']."</span></span>
+                                <span><img src='images/ui/bed-svgrepo-com.svg'></img><span>".$room['beds']."</span></span>
+                                <span><img src='images/ui/shower-svgrepo-com.svg'></img><span>".$room['bathrooms']."</span></span>
+                                <span><img src='images/ui/city-svgrepo-com.svg'></img><span>".$room['size']." m2</span></span>
+                                <div class='book-now-container'>
+                                    <a class='book-now-button'>Book now</a>
+                                </div>
+                            </div>
                         </div>";
                 }
             ?>
+        </div>
+        
+        <footer>
+            <span>© 2023 The Roosevelt Hotel</span>
+        </footer>
+    </main>
     </main>
 
     <script src='js/hamburgerMenu.js'></script>

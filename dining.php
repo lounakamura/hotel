@@ -50,7 +50,11 @@
                 <h2>Dining</h2>
                 <h3>Exquisite cuisine of an international standard</h3>
             </div>
-        </div>   
+        </div>
+        
+        <footer>
+            <span>© 2023 The Roosevelt Hotel</span>
+        </footer>
     </main>
 
     <script src='js/hamburgerMenu.js'></script>
