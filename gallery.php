@@ -51,6 +51,47 @@
                 <h3>Take a closer look at The Roosevelt Hotel</h3>
             </div>
         </div>
+        <div class='main-section'>
+            <div class='gallery-container'>
+                <div class='gallery'>
+                    <img src='images/gallery/1_min.jpg'>
+                    <img src='images/gallery/2_min.jpg'>
+                    <img src='images/gallery/3_min.jpg'>
+                    <img src='images/gallery/4_min.jpg'>
+                    <img src='images/gallery/5_min.jpg'>
+                    <img src='images/gallery/6_min.jpg'>
+                    <img src='images/gallery/7_min.jpg'>
+                    <img src='images/gallery/8_min.jpg'>
+                    <img src='images/gallery/9_min.jpg'>
+                    <img src='images/gallery/10_min.jpg'>
+                    <img src='images/gallery/11_min.jpg'>
+                    <img src='images/gallery/12_min.jpg'>
+                    <img src='images/gallery/13_min.jpg'>
+                    <img src='images/gallery/14_min.jpg'>
+                    <img src='images/gallery/15_min.jpg'>
+                    <img src='images/gallery/16_min.jpg'>
+                    <img src='images/gallery/17_min.jpg'>
+                    <img src='images/gallery/18_min.jpg'>
+                    <img src='images/gallery/19_min.jpg'>
+                    <img src='images/gallery/21_min.jpg'>
+                </div>
+                <div class='displayed-image hidden'>
+                    <div class='cross-icon'>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class='arrow-left'>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <img src=''>
+                    <div class='arrow-right'>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <footer>
             <span>© 2023 The Roosevelt Hotel</span>
@@ -59,6 +100,7 @@
 
     <script src='js/hamburgerMenu.js'></script>
     <script src='js/misc.js'></script>
+    <script src='js/gallery.js'></script>
 </body>
 </html>
 
