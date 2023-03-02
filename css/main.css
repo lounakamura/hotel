@@ -27,7 +27,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Work Sans", sans-serif;
   overflow-x: hidden;
   font-family: "Lato", sans-serif;
 }
@@ -50,6 +49,10 @@ a:-webkit-any-link {
 
 a:link {
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }
 
 input {

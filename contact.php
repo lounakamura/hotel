@@ -79,6 +79,22 @@
                     <span>Thailand</span>
                 </div>
             </div>
+
+            <div class='main-section'>
+                <div class='content-section'>
+                    <h4>Formularz kontaktowy</h4> <!-- TODO -->
+                    Full name
+                    e-mail
+                    message
+                    submit
+                </div>            
+            </div>
+
+            <div class='main-section'>
+                <div class='content-section'>
+                    <h4>FAQ</h4> <!-- TODO -->
+                </div>            
+            </div>
         </div>
         
         <footer>
