@@ -59,6 +59,11 @@ input {
   border: none;
 }
 
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 /* Additional */
 
 .hidden {
@@ -327,18 +332,16 @@ input {
 
 /* Book button */
 
-.book-now-container {
-  margin-top: 10px;
+.book-now-container button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 180px;
-  height: 60px;
+  height: 55px;
   border-radius: 5px;
-  backdrop-filter: blur(1px);
   color: #f7f6f4;
-  border: 1px solid #f7f6f4;
-  font-size: 23px;
+  background-color: black;
+  font-size: 22px;
   font-weight: 500;
   cursor: pointer;
 }

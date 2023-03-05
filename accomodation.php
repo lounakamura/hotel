@@ -67,40 +67,43 @@
                 foreach ( $rooms as $room ) {
                     echo "
                         <div class='content-section'>
-                            <div class='gallery'>
-                                <div class='arrow-left'>
-                                    <span></span>
-                                    <span></span>
+                            <form method='get' action='booking.php'>
+                                <div class='gallery'>
+                                    <div class='arrow-left'>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class='gallery-container'>";
+                                        $dir = "images/accomodation/".$room['room_id']."/";
+                                        $images = glob($dir."*.jpg");
+                                        
+                                        foreach($images as $image) {
+                                            echo "
+                                            <div class='gallery-photo'>
+                                                <img src='".$image."'>
+                                            </div>";
+                                        }
+                                echo "
+                                    </div>
+                                    <div class='arrow-right'>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
                                 </div>
-                                <div class='gallery-container'>";
-                                    $dir = "images/accomodation/".$room['room_id']."/";
-                                    $images = glob($dir."*.jpg");
-                                    
-                                    foreach($images as $image) {
-                                        echo "
-                                        <div class='gallery-photo'>
-                                            <img src='".$image."'>
-                                        </div>";
-                                    }
-                            echo "
+                                <div class='gallery-header'>
+                                    <h5>".$room['name']."</h5>
                                 </div>
-                                <div class='arrow-right'>
-                                    <span></span>
-                                    <span></span>
+                                <div class='description'>
+                                    <span><img src='images/ui/people-svgrepo-com.svg'></img><span>".$room['guests']."</span></span>
+                                    <span><img src='images/ui/bed-svgrepo-com.svg'></img><span>".$room['beds']."</span></span>
+                                    <span><img src='images/ui/shower-svgrepo-com.svg'></img><span>".$room['bathrooms']."</span></span>
+                                    <span><img src='images/ui/city-svgrepo-com.svg'></img><span>".$room['size']." m2</span></span>
+                                    <div class='book-now-container'>
+                                        <input type='hidden' name='room-type' value='".$room['room_id']."'>
+                                        <button class='book-now-button' type='submit'>Book now</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class='gallery-header'>
-                                <h5>".$room['name']."</h5>
-                            </div>
-                            <div class='description'>
-                                <span><img src='images/ui/people-svgrepo-com.svg'></img><span>".$room['guests']."</span></span>
-                                <span><img src='images/ui/bed-svgrepo-com.svg'></img><span>".$room['beds']."</span></span>
-                                <span><img src='images/ui/shower-svgrepo-com.svg'></img><span>".$room['bathrooms']."</span></span>
-                                <span><img src='images/ui/city-svgrepo-com.svg'></img><span>".$room['size']." m2</span></span>
-                                <div class='book-now-container'>
-                                    <a class='book-now-button'>Book now</a>
-                                </div>
-                            </div>
+                            </form>
                         </div>";
                 }
             ?>

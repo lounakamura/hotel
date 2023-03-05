@@ -1,0 +1,154 @@
+.main-container {
+  padding-top: 135px;
+}
+
+/* Calendar */
+.calendar-container {
+  width: 350px;
+  background-color: #f7f6f4;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: default;
+  user-select: none;
+}
+
+.calendar-container .month-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(350px / 7);
+  width: 100%;
+  padding: px;
+}
+
+.calendar-container .month-navigation h4 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.calendar ul {
+  display: flex;
+}
+
+.calendar ul.weekdays {
+  background-color: black;
+  color: #f7f6f4;
+}
+
+.calendar ul.days {
+  flex-wrap: wrap;
+  cursor: pointer;
+  color: black;
+}
+
+.calendar li {
+  height: 50px;
+  width: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar .weekdays li {
+  height: calc(350px / 7 / 1.3);
+}
+
+.calendar .days li:not(.inactive):not(.selected):hover {
+  background-color: #e3e3e3;
+}
+
+.calendar .days li.inactive {
+  color: #b3b3b3;
+}
+
+.calendar .days li.available {
+  color: green;
+}
+
+.calendar .days li.unavailable {
+  color: red;
+}
+
+.calendar .days li.selected {
+  color: white;
+  background-color: black;
+}
+
+/* Arrow-left */
+
+.arrow-left {
+  position: relative;
+  display: inline-block;
+  height: 33px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.arrow-left span {
+  position: absolute;
+  display: inline-block;
+  height: 20px;
+  width: 3px;
+  left: 20px;
+  border-radius: 3px;
+  background-color: black;
+}
+
+.arrow-left span:nth-child(1) {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.arrow-left span:nth-child(2) {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.arrow-left.inactive span {
+  background-color: #a3a3a3;
+}
+
+/* Arrow-right */
+
+.arrow-right {
+  position: relative;
+  display: inline-block;
+  height: 33px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.arrow-right span {
+  position: absolute;
+  display: inline-block;
+  height: 20px;
+  width: 3px;
+  left: 20px;
+  border-radius: 3px;
+  background-color: black;
+}
+
+.arrow-right span:nth-child(1) {
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.arrow-right span:nth-child(2) {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

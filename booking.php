@@ -15,7 +15,7 @@
     <title>Booking | The Roosevelt Hotel</title>
     <link rel="icon" type="image/ico" href="images/ui/logo.svg">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/booking.css">
     <script src="js/jquery-3.6.1.min.js"></script>
 </head>
 <body>
@@ -28,46 +28,55 @@
         </div>
     </header>
 
-    <main class='main-container' style='margin-top: 100vh'>
-    Pasek z mozliwoscia zmiany zeby sie odswiezalo jak sie zmieni
-            Calendar here
-            number of adults and children
-
+    <main class='main-container'>
         <div class='content-section'>
-            <div class='search-panel'>
-                <input type='text' value='01/03/2023 - 05/03/2023'>
-                <input type='text' value='2 Adults - 1 Child'>
-                <button>Search</button>
-            </div>
-        </div>
-
-    Sekcja do wybrania rodzaju pokoju
-        or pokaz wybrany pokoj
-        Ceny razem z pokojami
-        <div class='content-section'>
-            <div class='available-rooms'>
-                <div class='available-room'>
-                    room info
-                    price
-                    <button>Select room</button>
+            <h2>Check availability of $GET</h2>
+            <form method='POST'>
+                <div class='date-choose'>
+                    <label for='start-date'>Start date</label><input type='text' id='start-date' name='start-date' value='dd/mm/yyyy' readonly>
+                    <label for='end-date'>End date</label><input type='text' id='end-date' name='end-date' value='dd/mm/yyyy' readonly>
+                    <label for='guests'>Guests</label><input type='text' id='guests' name='guests' placeholder='2'>
+                    <button>Continue</button>
+                </div>
+            </form>
+            <div class='calendar-container'>
+                <div class='month-navigation'>
+                    <div class='arrow-left inactive'>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class='month-year'></h4>
+                    <div class='arrow-right'>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class='calendar'>
+                    <ul class='weekdays'>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                        <li>Sun</li>
+                    </ul>
+                    <ul class='days'></ul>
                 </div>
             </div>
-        </div>
-
-    Sekcja do wpisywania danych
-        Imie
-        Nazwisko
-        numer telefonu
-        adres e mail
-
-    Potwierdzenie rezerwacji i zaplata
+            <div class='content-section'>
+                <input type='text' name='first-name' placeholder='First name'>
+                <input type='text' name='last-name' placeholder='Last name'>
+                <input type='tel' name='phone' placeholder='Phone number'>
+                <input type='email' name='email' placeholder='Email address'>
+                <button type='submit'>Book</button>
+            </div>
         <footer>
             <span>© 2023 The Roosevelt Hotel</span>
         </footer>
     </main>
 
-
-    <script src='js/hamburgerMenu.js'></script>
+    <script src='js/calendarGenerator.js'></script>
     <script src='js/misc.js'></script>
 </body>
 </html>

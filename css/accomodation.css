@@ -23,6 +23,7 @@
   background-color: #f7f6f4;
   display: flex;
   flex-direction: column;
+  cursor: default;
 }
 
 .content-section:first-child {
@@ -160,7 +161,7 @@
 /* Room header */
 .gallery-header h5 {
   padding: 15px;
-  font-size: 23px;
+  font-size: 25px;
 }
 
 /* Description */
@@ -181,11 +182,4 @@
   display: flex;
   align-items: center;
   font-weight: 600;
-}
-
-/* Book now button */
-.book-now-container {
-  background-color: black;
-  margin-top: 0;
-  height: 55px;
 }
