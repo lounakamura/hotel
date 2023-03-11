@@ -1,41 +1,47 @@
-.main-section:nth-child(1) {
-  background-image: url("../images/bg/gallery/bg1.jpg");
+.main-section:nth-child(1) .content-section {
+  background-image: url("../images/bg/gallery/bg.webp");
 }
 
 .main-section:nth-child(2) {
   height: fit-content;
-  margin-bottom: 50px;
+  background-color: white;
 }
 
 /* Gallery */
 
-.gallery-container {
-  margin-top: 30px;
+.image-gallery {
+  /* Mobile first */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  margin-bottom: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
+}
+
+.image-gallery .column {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.image-item img {
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.gallery {
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery img {
-  width: 30vh;
-  height: 30vh;
-  margin: 15px;
   border-radius: 3px;
+  height: 100%;
   object-fit: cover;
-  transform: scale(1);
-  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  cursor: pointer;
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
-  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+@media only screen and (min-width: 768px) {
+  .image-gallery {
+    flex-direction: row;
+  }
 }
 
 /* Image closeup */
@@ -68,15 +74,16 @@
   -webkit-animation: slide-in-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
   animation: slide-in-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  filter: drop-shadow(#32325d40 0px 2px 5px) drop-shadow(#0000004d 0px 1px 3px);
 }
 
 .cross-icon div {
   display: inline-block;
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
   border-radius: 5px;
-  background-color: #f7f6f4;
+  background-color: white;
   opacity: 1;
   left: 0;
 }
@@ -95,11 +102,12 @@
 .arrow-left {
   height: 58px;
   left: 5vh;
+  filter: drop-shadow(#32325d40 0px 2px 5px) drop-shadow(#0000004d 0px 1px 3px);
 }
 
 .arrow-left span {
   height: 35px;
-  width: 5px;
+  width: 3px;
 }
 
 .arrow-left {
@@ -116,7 +124,7 @@
   display: inline-block;
   left: 20px;
   border-radius: 3px;
-  background-color: #ece9e2;
+  background-color: white;
 }
 
 .arrow-left span:nth-child(1) {
@@ -139,11 +147,12 @@
 .arrow-right {
   height: 58px;
   right: 5vh;
+  filter: drop-shadow(#32325d40 0px 2px 5px) drop-shadow(#0000004d 0px 1px 3px);
 }
 
 .arrow-right span {
   height: 35px;
-  width: 5px;
+  width: 3px;
 }
 
 .arrow-right {
@@ -160,7 +169,7 @@
   display: inline-block;
   left: 20px;
   border-radius: 3px;
-  background-color: #ece9e2;
+  background-color: white;
 }
 
 .arrow-right span:nth-child(1) {

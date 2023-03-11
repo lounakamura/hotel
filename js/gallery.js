@@ -1,4 +1,4 @@
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('.image-gallery');
 const photos = Array.from(gallery.querySelectorAll('img'));
 
 const displayedImgContainer = document.querySelector('.displayed-image');
@@ -14,6 +14,7 @@ photos.forEach(picture => {
   picture.onmousedown = function() {
     if(event.button === 0) {
       curentPhotoIndex = photos.indexOf(this);
+      $(displayedImg).attr('src', '');
       photoforDisplay = ($(picture).attr('src')).replace('_min','');
       $(displayedImg).attr('src', photoforDisplay); 
       $(displayedImgContainer).removeClass('hidden');
@@ -57,6 +58,7 @@ document.onkeydown = function(event) {
 function galleryPrevious() {
   if(currentPhotoIndex>0){
     currentPhotoIndex -= 1;
+    $(displayedImg).attr('src', '');
     photoforDisplay = ($(photos[currentPhotoIndex]).attr('src')).replace('_min','');
     $(displayedImg).attr('src', photoforDisplay);
   }
@@ -65,6 +67,7 @@ function galleryPrevious() {
 function galleryNext() {
   if(currentPhotoIndex<photos.length-1){
     currentPhotoIndex += 1;
+    $(displayedImg).attr('src', '');
     photoforDisplay = ($(photos[currentPhotoIndex]).attr('src')).replace('_min','');
     $(displayedImg).attr('src', photoforDisplay); 
   }

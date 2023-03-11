@@ -1,5 +1,5 @@
-.main-section:nth-child(1) {
-  background-image: url("../images/bg/contact/bg1.jpg");
+.main-section:nth-child(1) .content-section {
+  background-image: url("../images/bg/contact/bg.webp");
 }
 
 .main-section:nth-child(2) {
@@ -18,4 +18,123 @@
 /* Contact information */
 
 .contact-info {
+}
+
+/* Accordions */
+
+.container-questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-question {
+  width: 800px;
+  height: fit-content;
+  margin: 10px;
+  background-color: #f7f6f4;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.question {
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.question:hover,
+.question.open:hover {
+  background-color: #f1f0ec;
+}
+
+.question.open {
+  border-bottom: 2px solid #f1f0ec;
+}
+
+.question h3 {
+  font-weight: 800;
+  font-size: 20px;
+  user-select: none;
+}
+
+.arrow-flip {
+  position: relative;
+  display: inline-block;
+  height: 45px;
+  width: 39px;
+  padding: 10px;
+}
+
+.arrow-flip span {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  height: 4px;
+  width: 24px;
+  border-radius: 3px;
+  background-color: black;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.arrow-flip span:nth-child(1) {
+  right: 0;
+}
+
+.arrow-flip span:nth-child(2) {
+  left: 0;
+}
+
+.arrow-flip span:nth-child(2),
+.question.open .arrow-flip span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.arrow-flip span:nth-child(1),
+.question.open .arrow-flip span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.answer {
+  width: 100%;
+  display: inline-block;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.answer.open {
+  max-height: fit-content;
+}
+
+.answer p {
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 20px;
 }

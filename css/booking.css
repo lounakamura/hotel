@@ -2,15 +2,45 @@
   padding-top: 135px;
 }
 
+.content-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Form */
+.date-choose {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.date-choose form {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #f7f6f4;
+  border-radius: 3px;
+  box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+}
+
 /* Calendar */
 .calendar-container {
   width: 350px;
   background-color: #f7f6f4;
   border-radius: 3px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
   cursor: default;
   user-select: none;
+}
+
+.calendar-container * {
+  font-family: "Lato", sans-serif;
 }
 
 .calendar-container .month-navigation {
@@ -151,4 +181,9 @@
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+/* Guest number input */
+.guests-value {
+  font-family: "Lato", sans-serif;
 }

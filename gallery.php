@@ -24,6 +24,7 @@
             <div class='header-logo-container'>
                 <img src='images/ui/logo.svg'>
                 <h1>The Roosevelt Hotel</h1>
+                <img src='images/ui/logo2.svg'>
             </div>
             <div class='hamburger-icon'>
                 <div></div>
@@ -38,7 +39,6 @@
         <div class='hamburger-menu-bg hidden'>
             <a class='hamburger-menu-option' href='index.php'>Home</a>
             <a class='hamburger-menu-option' href='accomodation.php'>Accomodation</a>
-            <a class='hamburger-menu-option' href='dining.php'>Dining</a>
             <a class='hamburger-menu-option' href='gallery.php'>Gallery</a>
             <a class='hamburger-menu-option' href='contact.php'>Contact</a>
         </div>
@@ -46,34 +46,38 @@
 
     <main class='main-container'>
         <div class='main-section'>
-            <div class='main-content'>
-                <h2>Gallery</h2>
-                <h3>Take a closer look at The Roosevelt Hotel</h3>
-            </div>
+            <div class='content-section'></div>
         </div>
         <div class='main-section'>
             <div class='gallery-container'>
-                <div class='gallery'>
-                    <img src='images/gallery/1_min.jpg'>
-                    <img src='images/gallery/2_min.jpg'>
-                    <img src='images/gallery/3_min.jpg'>
-                    <img src='images/gallery/4_min.jpg'>
-                    <img src='images/gallery/5_min.jpg'>
-                    <img src='images/gallery/6_min.jpg'>
-                    <img src='images/gallery/7_min.jpg'>
-                    <img src='images/gallery/8_min.jpg'>
-                    <img src='images/gallery/9_min.jpg'>
-                    <img src='images/gallery/10_min.jpg'>
-                    <img src='images/gallery/11_min.jpg'>
-                    <img src='images/gallery/12_min.jpg'>
-                    <img src='images/gallery/13_min.jpg'>
-                    <img src='images/gallery/14_min.jpg'>
-                    <img src='images/gallery/15_min.jpg'>
-                    <img src='images/gallery/16_min.jpg'>
-                    <img src='images/gallery/17_min.jpg'>
-                    <img src='images/gallery/18_min.jpg'>
-                    <img src='images/gallery/19_min.jpg'>
-                    <img src='images/gallery/21_min.jpg'>
+                <div class='image-gallery'>
+                    <div class='column'>
+                        <div class='image-item'><img src='images/gallery/1_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/2_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/3_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/4_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/5_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/6_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/7_min.webp'></div>
+                    </div>
+                    <div class='column'>
+                        <div class='image-item'><img src='images/gallery/8_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/9_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/10_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/11_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/12_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/13_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/14_min.webp'></div>
+                    </div>
+                    <div class='column'>
+                        <div class='image-item'><img src='images/gallery/15_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/16_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/17_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/18_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/19_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/20_min.webp'></div>
+                        <div class='image-item'><img src='images/gallery/21_min.webp'></div>
+                    </div>
                 </div>
                 <div class='displayed-image hidden'>
                     <div class='cross-icon'>
@@ -97,6 +101,8 @@
             <span>© 2023 The Roosevelt Hotel</span>
         </footer>
     </main>
+
+    
 
     <script src='js/hamburgerMenu.js'></script>
     <script src='js/misc.js'></script>

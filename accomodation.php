@@ -31,6 +31,7 @@
             <div class='header-logo-container'>
                 <img src='images/ui/logo.svg'>
                 <h1>The Roosevelt Hotel</h1>
+                <img src='images/ui/logo2.svg'>
             </div>
             <div class='hamburger-icon'>
                 <div></div>
@@ -45,7 +46,6 @@
         <div class='hamburger-menu-bg hidden'>
             <a class='hamburger-menu-option' href='index.php'>Home</a>
             <a class='hamburger-menu-option' href='accomodation.php'>Accomodation</a>
-            <a class='hamburger-menu-option' href='dining.php'>Dining</a>
             <a class='hamburger-menu-option' href='gallery.php'>Gallery</a>
             <a class='hamburger-menu-option' href='contact.php'>Contact</a>
         </div>
@@ -53,16 +53,9 @@
 
     <main class='main-container'>
         <div class='main-section'>
-            <div class='main-content'>
-                <h2>Accomodation</h2>
-                <h3>Explore our choice of rooms</h3>
-            </div>
+            <div class='content-section'></div>
         </div>
         <div class='main-section'>
-            <div class='content-section'>
-                <h4>Rooms & Suites</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis tincidunt lectus. Etiam congue ipsum sed lectus semper, non commodo purus dapibus. Aliquam ultricies dui suscipit augue commodo, sit amet feugiat odio vestibulum. Duis facilisis molestie nisi interdum condimentum. Quisque consectetur fermentum lacus at aliquet. </p>
-            </div>
             <?php 
                 foreach ( $rooms as $room ) {
                     echo "

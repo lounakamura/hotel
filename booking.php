@@ -4,6 +4,11 @@
     require_once "config.php";
 
     $connection = new mysqli ($servername, $username, $password, $database);
+
+    $query = "SELECT room_id, name, guests, price_per_night FROM room_type WHERE room_id=".$_GET['room-type'];
+    $result = $connection->query($query);
+    $selectedRoomType = $result->fetch_assoc();
+    $result->free();
 ?>
 
 <!DOCTYPE html>
@@ -24,22 +29,36 @@
             <div class='header-logo-container'>
                 <img src='images/ui/logo.svg'>
                 <h1>The Roosevelt Hotel</h1>
+                <img src='images/ui/logo2.svg'>
             </div>
         </div>
     </header>
 
     <main class='main-container'>
         <div class='content-section'>
-            <h2>Check availability of $GET</h2>
-            <form method='POST'>
-                <div class='date-choose'>
-                    <label for='start-date'>Start date</label><input type='text' id='start-date' name='start-date' value='dd/mm/yyyy' readonly>
-                    <label for='end-date'>End date</label><input type='text' id='end-date' name='end-date' value='dd/mm/yyyy' readonly>
-                    <label for='guests'>Guests</label><input type='text' id='guests' name='guests' placeholder='2'>
-                    <button>Continue</button>
-                </div>
-            </form>
-            <div class='calendar-container'>
+            <div class='date-choose'>
+                <form method='POST'>
+                    <div>
+                        <label for='start-date'>Start date</label><input type='text' id='start-date' name='start-date' value='dd/mm/yyyy' readonly>
+                    </div>
+                    <div>
+                        <label for='end-date'>End date</label><input type='text' id='end-date' name='end-date' value='dd/mm/yyyy' readonly>
+                    </div>
+                    <div>
+                        <label for='guests'>Guests</label>
+                        <button type='button' class='subtract-btn'>-</button>
+                        <?php
+                            echo "<span class='guests-value' data-min='1' data-max='".$selectedRoomType['guests']."' data-step='1'>1</span>";
+                        ?>
+                        
+                        <button type='button' class='add-btn'>+</button>
+                        
+                    </div>
+                    <button type='submit'>Continue</button>
+                </form>
+            </div>
+            
+            <div class='calendar-container not-displayed'>
                 <div class='month-navigation'>
                     <div class='arrow-left inactive'>
                         <span></span>
@@ -77,6 +96,7 @@
     </main>
 
     <script src='js/calendarGenerator.js'></script>
+    <script src='js/booking.js'></script>
     <script src='js/misc.js'></script>
 </body>
 </html>

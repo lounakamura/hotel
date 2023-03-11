@@ -24,6 +24,7 @@
             <div class='header-logo-container'>
                 <img src='images/ui/logo.svg'>
                 <h1>The Roosevelt Hotel</h1>
+                <img src='images/ui/logo2.svg'>
             </div>
             <div class='hamburger-icon'>
                 <div></div>
@@ -38,7 +39,6 @@
         <div class='hamburger-menu-bg hidden'>
             <a class='hamburger-menu-option' href='index.php'>Home</a>
             <a class='hamburger-menu-option' href='accomodation.php'>Accomodation</a>
-            <a class='hamburger-menu-option' href='dining.php'>Dining</a>
             <a class='hamburger-menu-option' href='gallery.php'>Gallery</a>
             <a class='hamburger-menu-option' href='contact.php'>Contact</a>
         </div>
@@ -46,10 +46,7 @@
 
     <main class='main-container'>
         <div class='main-section'>
-            <div class='main-content'>
-                <h2>Contact</h2>
-                <h3>Contact information and our location</h3>
-            </div>
+            <div class='content-section'></div>
         </div>
         <div class='main-section'>
             <div class='content-section'>
@@ -93,6 +90,32 @@
             <div class='main-section'>
                 <div class='content-section'>
                     <h4>FAQ</h4> <!-- TODO -->
+                    <div class='container-questions'>
+                        <div class='container-question'>
+                            <div class='question'>
+                            <h3>Dog goes "woof"</h3>
+                            <div class='arrow-flip'>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            </div>
+                            <div class='answer'>
+                            <p>
+                                Cat goes "meow"<br>
+                                Bird goes "tweet"<br>
+                                And mouse goes "squeek"<br>
+                                Cow goes "moo"<br>
+                                Frog goes "croak"<br>
+                                And the elephant goes "toot"<br>
+                                Ducks say "quack"<br>
+                                And fish go "blub"<br>
+                                And the seal goes "ow ow ow"<br>
+                                But there's one sound<br>
+                                That no one knows
+                            </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>            
             </div>
         </div>
@@ -103,6 +126,7 @@
     </main>
 
     <script src='js/hamburgerMenu.js'></script>
+    <script src='js/accordions.js'></script>
     <script src='js/misc.js'></script>
 </body>
 </html>
