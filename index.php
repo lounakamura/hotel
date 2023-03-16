@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    require_once "config.php";
+    require_once "php/config.php";
 
     $connection = new mysqli ($servername, $username, $password, $database);
 ?>
@@ -41,6 +41,13 @@
             <a class='hamburger-menu-option' href='accomodation.php'>Accomodation</a>
             <a class='hamburger-menu-option' href='gallery.php'>Gallery</a>
             <a class='hamburger-menu-option' href='contact.php'>Contact</a>
+            <?php
+                if (isset($_SESSION['loggedin']) && $_SESSION['is_admin'] == true){
+                    echo "<a class='hamburger-menu-option' href='admin.php' style='color: red;'>Admin panel</a>
+                    <a class='hamburger-menu-option' href='logout.php' style='color: red;'>Log out</a>
+                    ";
+                }
+            ?>
         </div>
     </nav>
 

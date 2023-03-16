@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    require_once "config.php";
+    require_once "php/config.php";
 
     $connection = new mysqli ($servername, $username, $password, $database);
 
@@ -48,6 +48,13 @@
             <a class='hamburger-menu-option' href='accomodation.php'>Accomodation</a>
             <a class='hamburger-menu-option' href='gallery.php'>Gallery</a>
             <a class='hamburger-menu-option' href='contact.php'>Contact</a>
+            <?php
+                if (isset($_SESSION['loggedin']) && $_SESSION['is_admin'] == true){
+                    echo "<a class='hamburger-menu-option' href='admin.php' style='color: red;'>Admin panel</a>
+                    <a class='hamburger-menu-option' href='logout.php' style='color: red;'>Log out</a>
+                    ";
+                }
+            ?>
         </div>
     </nav>
 
@@ -60,7 +67,7 @@
                 foreach ( $rooms as $room ) {
                     echo "
                         <div class='content-section'>
-                            <form method='get' action='booking.php'>
+                            <form method='get' action='rates.php'>
                                 <div class='gallery'>
                                     <div class='arrow-left'>
                                         <span></span>
@@ -91,9 +98,9 @@
                                     <span><img src='images/ui/bed-svgrepo-com.svg'></img><span>".$room['beds']."</span></span>
                                     <span><img src='images/ui/shower-svgrepo-com.svg'></img><span>".$room['bathrooms']."</span></span>
                                     <span><img src='images/ui/city-svgrepo-com.svg'></img><span>".$room['size']." m2</span></span>
-                                    <div class='book-now-container'>
+                                    <div class='check-rates-container'>
                                         <input type='hidden' name='room-type' value='".$room['room_id']."'>
-                                        <button class='book-now-button' type='submit'>Book now</button>
+                                        <button class='check-rates-button' type='submit'>Check rates</button>
                                     </div>
                                 </div>
                             </form>
@@ -105,7 +112,6 @@
         <footer>
             <span>© 2023 The Roosevelt Hotel</span>
         </footer>
-    </main>
     </main>
 
     <script src='js/hamburgerMenu.js'></script>

@@ -8,26 +8,28 @@ galleries.forEach(gallery => {
   let displayedPhotoIndex = 0;
   
   arrowPrev.onclick = function(){
-      if(displayedPhotoIndex>0){
-        displayedPhotoIndex--;
-      } else {
-        displayedPhotoIndex = photos.length-1;
-      }
-      photos[displayedPhotoIndex].scrollIntoView({
-        behavior: 'smooth',
-        block: "center"
-      });
+    if(displayedPhotoIndex>0){
+      displayedPhotoIndex--;
+    } else {
+      displayedPhotoIndex = photos.length-1;
+    }
+    photos[displayedPhotoIndex].scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest', 
+      inline: 'start'
+    });
   }
   
   arrowNext.onclick = function(){
     if(displayedPhotoIndex<photos.length-1){
-        displayedPhotoIndex++;
+      displayedPhotoIndex++;
     } else {
       displayedPhotoIndex = 0;
     }
     photos[displayedPhotoIndex].scrollIntoView({
       behavior: 'smooth',
-      block: "center"
+      block: 'nearest', 
+      inline: 'start'
     });
   }
 });
