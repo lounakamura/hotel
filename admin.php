@@ -45,11 +45,19 @@
 
     <main class='main-container'>
         <div class='main-section'>
+        <div class='go-back' onclick='location.href="index.php"'>
+                <div class='arrow-back'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span>Return to home</span>
+            </div>
+            <h2>Make a reservation</h2>
             <form method='POST' action='php/reservation.php'>
                 <div class='content-section'>
-                    <h2>Make a reservation</h2>
                     <div class='room-selection'>
-                        <label for='room-type'>Choose room type:</label>
+                        <label for='room-type'>Room type</label>
                         <select name='room-type' id='room-type'>
                             <?php
                                 foreach( $roomTypes as $roomType ) {
@@ -58,6 +66,7 @@
                             ?>
                         </select>
                     </div>
+
                     <div class='date-choose'>
                         <div>
                             <div>
@@ -97,20 +106,34 @@
 
                     <div class='guest-amount'>
                         <label for='guests'>Guests</label>
-                        <input type='hidden' class='no-of-guests' name='no-of-guests' value='1'>
-                        <button type='button' class='subtract-btn'>-</button>
-                            <?php 
-                                echo "
-                                <span class='guests-value' data-min='1' data-max='3' data-step='1'>1</span>";
-                            ?>
-                        <button type='button' class='add-btn'>+</button>
+                        <div class='custom-amount-picker'>
+                            <input type='hidden' class='no-of-guests' name='no-of-guests' value='1'>
+                            <button type='button' class='subtract-btn'>-</button>
+                                <span class='guests-value' data-min='1' data-max='3' data-step='1'>1</span>
+                            <button type='button' class='add-btn'>+</button>
+                        </div>
                     </div>
 
                     <div class='guest-info'>
-                        <input type='text' name='first-name' placeholder='First name'>
-                        <input type='text' name='last-name' placeholder='Last name'>
-                        <input type='tel' name='phone' placeholder='Phone number'>
-                        <input type='email' name='email' placeholder='Email address'>
+                        <div>
+                            <label for='first-name'>First name</label>
+                            <input type='text' name='first-name' id='first-name' required>
+                        </div>
+                        <div>
+                            <label for='last-name'>Last name</label>
+                            <input type='text' name='last-name' id='last-name' required>
+                        </div>
+                        <div>
+                            <label for='phone'>Phone number</label>
+                            <input type='tel' name='phone' id='phone' required>
+                        </div>
+                        <div>
+                            <label for='email'>Email address</label>
+                            <input type='email' name='email' id='email' required>
+                        </div>
+                    </div>
+
+                    <div class='book-btn-container'>
                         <button type='submit' class='book-btn'>Book</button>
                     </div>
                 </div>
@@ -123,7 +146,7 @@
     </main>
 
     <script src='js/calendarGenerator.js'></script>
-    <script src='js/booking.js'></script>
+    <script src='js/calendarDisplayer.js'></script>
     <script src='js/admin.js'></script>
     <script src='js/misc.js'></script>
 </body>

@@ -71,40 +71,30 @@
                         </div>";
                     ?>
                 </div>
-                <div class='date-choose'>
-                    <form method='POST'>
-                        <div>
-                            <input type='text' id='start-date' name='start-date' value='View calendar' readonly>
+
+                <div class='calendar-container'>
+                    <div class='month-navigation'>
+                        <div class='arrow-left inactive'>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <div class='not-displayed'>
-                            <input type='text' id='end-date' name='end-date' value='dd/mm/yyyy' readonly>
+                        <h4 class='month-year'></h4>
+                        <div class='arrow-right'>
+                            <span></span>
+                            <span></span>
                         </div>
-                    </form>
-                    
-                    <div class='calendar-container not-displayed'>
-                        <div class='month-navigation'>
-                            <div class='arrow-left inactive'>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <h4 class='month-year'></h4>
-                            <div class='arrow-right'>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class='calendar'>
-                            <ul class='weekdays'>
-                                <li>Mon</li>
-                                <li>Tue</li>
-                                <li>Wed</li>
-                                <li>Thu</li>
-                                <li>Fri</li>
-                                <li>Sat</li>
-                                <li>Sun</li>
-                            </ul>
-                            <ul class='days'></ul>
-                        </div>
+                    </div>
+                    <div class='calendar'>
+                        <ul class='weekdays'>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                            <li>Sun</li>
+                        </ul>
+                        <ul class='days'></ul>
                     </div>
                 </div>
             </div>

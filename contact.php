@@ -58,72 +58,95 @@
         <div class='main-section'>
             <div class='content-section'>
                 <div class='contact-info'>
-                    <div class='contact-header'>
-                        <h4>Contact us</h4>
-                    </div>
                     <div class='phone'>
-                        <h5>Telephone</h5>
+                        <h2>Telephone</h2>
                         <span>+1 800 819 5053</span>
                     </div>
                     <div class='email'>
-                        <h5>E-mail</h5>
+                        <h2>E-mail</h2>
                         <span>theroosevelt@hotel.com</span>
                     </div>
                 </div>
             </div>
+
             <div class='content-section'>
-                <div class='map'>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1097666762676!2d100.50791181482998!3d13.711801190373334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e298bf9d51fd81%3A0xc5eea6af49e69569!2sFour%20Seasons%20Hotel%20Bangkok%20at%20Chao%20Phraya%20River!5e0!3m2!1spl!2spl!4v1675717860831!5m2!1spl!2spl" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class='address'>
-                    <h5>Address</h5>
-                    <span>The Roosevelt Hotel</span>
-                    <span>300/1 Charoen Krung Rd</span>
-                    <span>Bangkok 10120</span>
-                    <span>Thailand</span>
-                </div>
+                <h2>Contact us</h2>
+                <form method='POST'>
+                    <div>
+                        <label for='full-name'>Full name</label>
+                        <input type='text' name='full-name' id='full-name'>
+                    </div>
+                    <div>
+                        <label for='email'>Email</label>
+                        <input type='email' name='email' id='email'>
+                    </div>
+                    <div>
+                        <label for='message'>Message</label>
+                        <textarea name='message' id='message'></textarea>
+                    </div>
+                <button type='submit'>Send</button>
+                </form>
             </div>
 
-            <div class='main-section'>
-                <div class='content-section'>
-                    <h4>Formularz kontaktowy</h4> <!-- TODO -->
-                    Full name
-                    e-mail
-                    message
-                    submit
-                </div>            
-            </div>
-
-            <div class='main-section'>
-                <div class='content-section'>
-                    <h4>FAQ</h4> <!-- TODO -->
-                    <div class='container-questions'>
-                        <div class='container-question'>
-                            <div class='question'>
-                            <h3>Dog goes "woof"</h3>
+            <div class='content-section'>
+                <h2>FAQ</h2> <!-- TODO -->
+                <div class='container-questions'>
+                    <div class='container-question'>
+                        <div class='question'>
+                            <h3>Question1</h3>
                             <div class='arrow-flip'>
                                 <span></span>
                                 <span></span>
                             </div>
-                            </div>
-                            <div class='answer'>
+                        </div>
+                        <div class='answer'>
                             <p>
-                                Cat goes "meow"<br>
-                                Bird goes "tweet"<br>
-                                And mouse goes "squeek"<br>
-                                Cow goes "moo"<br>
-                                Frog goes "croak"<br>
-                                And the elephant goes "toot"<br>
-                                Ducks say "quack"<br>
-                                And fish go "blub"<br>
-                                And the seal goes "ow ow ow"<br>
-                                But there's one sound<br>
-                                That no one knows
+                                Answer
                             </p>
-                            </div>
                         </div>
                     </div>
-                </div>            
+                    <div class='container-question'>
+                        <div class='question'>
+                            <h3>Question2</h3>
+                            <div class='arrow-flip'>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class='answer'>
+                            <p>
+                                Answer
+                            </p>
+                        </div>
+                    </div>
+                    <div class='container-question'>
+                        <div class='question'>
+                            <h3>Question3</h3>
+                            <div class='arrow-flip'>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class='answer'>
+                            <p>
+                                Answer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='content-section'>
+                <div class='address'>
+                    <h2>Address</h2>
+                    <span>The Roosevelt Hotel</span>
+                    <span>45 East 45th Street</span>
+                    <span>New York 10017</span>
+                    <span>The United States</span>
+                </div>
+                <div class='map'>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.3346185506603!2d-73.97942548459378!3d40.75466447932737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fe06a22399%3A0x206b4253a07248e8!2sThe%20Roosevelt%20Hotel!5e0!3m2!1spl!2spl!4v1679156568088!5m2!1spl!2spl" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
         
