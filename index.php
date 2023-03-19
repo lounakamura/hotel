@@ -65,12 +65,31 @@
                 </p>
             </div>
         </div>
+
         <div class='main-section'>
             <div class='content-section'>
-
+                <h2>A creative discovery</h2>
+                <div>
+                    <img src='images/home/1.jpg'></img>
+                    <p>
+                        Right on our doorstep, the small streets and alleys that extend from historic Road are undergoing a renaissance. Let us take you on a behind-the-scenes tour of our remarkable neighbourhood, from after-hours gallery hopping to street food sampling.
+                    </p>
+                </div>
             </div>
         </div>
-        
+
+        <div class='main-section'>
+            <div class='content-section'>
+                <h2>The ultimate staycation</h2>
+                <div>
+                    <img src='images/home/2.jpg'></img>
+                    <p>
+                        Get away from it all without ever leaving the city. Our urban resort features a stellar collection of restaurants and bars offering world-class dining experience and lively social venues, a 2,500 square metres Urban Wellness Centre to balance the mind, body, and work, and two riverfront infinity pools to staycation in style.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <span>© 2023 The Roosevelt Hotel</span>
         </footer>

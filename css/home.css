@@ -13,8 +13,7 @@
   width: 80vw;
   z-index: 5;
   background-color: white;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-radius: 3px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px -3px 5px 0px,
     rgba(0, 0, 0, 0.3) 0px -2px 3px 0px;
   padding-left: 5%;
@@ -35,4 +34,67 @@
   font-size: 21px;
   font-weight: 500;
   padding: 40px;
+}
+
+.main-section:nth-child(3),
+.main-section:nth-child(4) {
+  padding-top: 30px;
+  background-color: #261c14;
+}
+
+.main-section:nth-child(3) .content-section,
+.main-section:nth-child(4) .content-section {
+  border-radius: 3px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.main-section:nth-child(3) .content-section h2,
+.main-section:nth-child(4) .content-section h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 29px;
+  padding: 30px;
+  font-weight: 700;
+  color: #261c14;
+  border-bottom: 1px solid #261c14;
+}
+
+.main-section:nth-child(3) .content-section img,
+.main-section:nth-child(4) .content-section img {
+  width: 50%;
+  box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+  border-radius: 3px;
+}
+
+.main-section:nth-child(3) .content-section > div {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.main-section:nth-child(4) .content-section > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 40px;
+}
+
+.main-section:nth-child(3) .content-section p,
+.main-section:nth-child(4) .content-section p {
+  font-size: 21px;
+  font-weight: 500;
+  width: 50%;
+  text-align: center;
+}
+
+.main-section:nth-child(3) .content-section p {
+  padding: 40px 0 40px 40px;
+}
+
+.main-section:nth-child(4) .content-section p {
+  padding: 40px 40px 40px 0;
 }

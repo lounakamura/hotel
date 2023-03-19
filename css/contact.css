@@ -2,16 +2,155 @@
   background-image: url("../images/bg/contact/bg.webp");
 }
 
-.content-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Contact information */
 
-.contact-info {
+.main-section:nth-child(2) {
+  display: grid;
+  justify-content: center;
+  margin-top: -100px;
+  background-color: #261c14;
+}
+
+.main-section:nth-child(2) .content-section {
+  width: 80vw;
+  z-index: 5;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px -3px 5px 0px,
+    rgba(0, 0, 0, 0.3) 0px -2px 3px 0px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  text-align: center;
+  box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+}
+
+.content-section h2 {
+  text-align: center;
+  font-size: 29px;
+  padding: 30px;
+  font-weight: 700;
+}
+
+/* Contact information - details */
+
+/* Info */
+
+.contact-info span {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.contact-info .phone {
+  color: #261c14;
+  border-bottom: 1px solid #261c14;
+  padding-bottom: 30px;
+}
+
+/* Message */
+
+.s2 h2 {
+  color: #261c14;
+  border-bottom: 1px solid #261c14;
+  margin-bottom: 30px;
+}
+
+.s2 form {
+  width: 800px;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+}
+
+.s2 form div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input,
+textarea {
+  margin-left: 5%;
+  width: 80%;
+  border-radius: 3px;
+  border: 1px solid #00000027;
+}
+
+label {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+input {
+  height: 30px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+button {
+  font-family: "Lato", sans-serif;
+  float: right;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  color: #f7f6f4;
+  background-color: black;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Accord */
+
+.s3 h2 {
+  color: #261c14;
+  border-bottom: 1px solid #261c14;
+  margin-bottom: 30px;
+}
+
+/* Address */
+
+.s4 h2 {
+  color: #261c14;
+  border-bottom: 1px solid #261c14;
+  margin-bottom: 30px;
+}
+
+/* Grid */
+
+.s1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.s2 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.s3 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.s4 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 4;
 }
 
 /* Accordions */
@@ -20,6 +159,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .container-question {

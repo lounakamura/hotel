@@ -56,11 +56,11 @@
             <div class='content-section'></div>
         </div>
         <div class='main-section'>
-            <div class='content-section'>
+            <div class='content-section s1'>
                 <div class='contact-info'>
                     <div class='phone'>
-                        <h2>Telephone</h2>
-                        <span>+1 800 819 5053</span>
+                        <h2>Phone number</h2>
+                        <span>+1 800 819 5053<span>
                     </div>
                     <div class='email'>
                         <h2>E-mail</h2>
@@ -69,27 +69,27 @@
                 </div>
             </div>
 
-            <div class='content-section'>
+            <div class='content-section s2'>
                 <h2>Contact us</h2>
-                <form method='POST'>
+                <form method='POST' action='php/sendMessage.php'>
                     <div>
                         <label for='full-name'>Full name</label>
-                        <input type='text' name='full-name' id='full-name'>
+                        <input type='text' name='full-name' id='full-name' required>
                     </div>
                     <div>
                         <label for='email'>Email</label>
-                        <input type='email' name='email' id='email'>
+                        <input type='email' name='email' id='email' required>
                     </div>
                     <div>
                         <label for='message'>Message</label>
-                        <textarea name='message' id='message'></textarea>
+                        <textarea name='message' id='message' required></textarea>
                     </div>
-                <button type='submit'>Send</button>
+                    <button type='submit'>Send</button>
                 </form>
             </div>
 
-            <div class='content-section'>
-                <h2>FAQ</h2> <!-- TODO -->
+            <div class='content-section s3'>
+                <h2>FAQ</h2>
                 <div class='container-questions'>
                     <div class='container-question'>
                         <div class='question'>
@@ -136,20 +136,16 @@
                 </div>
             </div>
 
-            <div class='content-section'>
+            <div class='content-section s4'>
                 <div class='address'>
                     <h2>Address</h2>
-                    <span>The Roosevelt Hotel</span>
-                    <span>45 East 45th Street</span>
-                    <span>New York 10017</span>
-                    <span>The United States</span>
                 </div>
                 <div class='map'>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.3346185506603!2d-73.97942548459378!3d40.75466447932737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fe06a22399%3A0x206b4253a07248e8!2sThe%20Roosevelt%20Hotel!5e0!3m2!1spl!2spl!4v1679156568088!5m2!1spl!2spl" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
-        
+                    
         <footer>
             <span>© 2023 The Roosevelt Hotel</span>
         </footer>

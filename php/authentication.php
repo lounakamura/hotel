@@ -9,7 +9,7 @@
         header('Location: ../login.php');
     }
 
-    if ($stmt = $connection->prepare('SELECT account_id, password, is_admin FROM accounts WHERE username = ?')) {
+    if ($stmt = $connection->prepare('SELECT account_id, password, is_admin FROM account WHERE username = ?')) {
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $stmt->store_result();

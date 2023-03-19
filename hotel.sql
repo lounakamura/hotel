@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 16 Mar 2023, 23:00
+-- Czas generowania: 19 Mar 2023, 17:52
 -- Wersja serwera: 10.4.22-MariaDB
 -- Wersja PHP: 8.0.13
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `accounts`
+-- Struktura tabeli dla tabeli `account`
 --
 
-CREATE TABLE `accounts` (
+CREATE TABLE `account` (
   `account_id` tinyint(4) NOT NULL,
   `username` varchar(32) COLLATE utf8mb4_polish_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_polish_ci NOT NULL,
@@ -35,10 +35,10 @@ CREATE TABLE `accounts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
 --
--- Zrzut danych tabeli `accounts`
+-- Zrzut danych tabeli `account`
 --
 
-INSERT INTO `accounts` (`account_id`, `username`, `password`, `is_admin`) VALUES
+INSERT INTO `account` (`account_id`, `username`, `password`, `is_admin`) VALUES
 (1, 'admin', 'admin', 1);
 
 -- --------------------------------------------------------
@@ -64,7 +64,7 @@ INSERT INTO `guest` (`guest_id`, `first_name`, `last_name`, `phone`, `email`) VA
 (2, 'Jesse', 'Pinkman', '+48 123 456 789', 'jesse@pinkman.pl'),
 (3, 'Bill', 'Gates', '+00 000 000 000', 'bill.gates@gmail.com'),
 (4, 'Skyler', 'White', '987 654 321', 'skyler@white.com'),
-(5, 'Elon', 'Musk', '+1 111 111 111', 'elonmusk@twitter.nasa'),
+(5, 'Elon', 'Musk', '+1 111 111 111', 'elonmusk@twitter.spacex'),
 (6, 'Selena', 'Gomez', '555 555 555', 'gomezselena@gmail.com'),
 (7, 'Adam', 'Mickiewicz', '+9 999 999 999', 'adammickiewicz@onet.pl'),
 (8, 'Juliusz', 'Słowacki', '+7 777 777 777', 'juliusz@slowacki.pl'),
@@ -73,7 +73,36 @@ INSERT INTO `guest` (`guest_id`, `first_name`, `last_name`, `phone`, `email`) VA
 (11, 'Bill', 'Nye', '+6 999 333 111', 'bill@nye.com'),
 (12, 'Alicja', 'Dębska', '+48 000 111 222', 'alicja@debska.pl'),
 (13, 'Norbert', 'Gierczak', '732 123 675', 'norbert.gierczak@interia.pl'),
-(14, 'Karol', 'Wiśniewski', '555 666 777', 'friz@friz.friz');
+(14, 'Karol', 'Wiśniewski', '555 666 777', 'friz@friz.friz'),
+(16, 'Bill', 'Pinkman', '+1 111 111 111', 'walter@white.com'),
+(17, 'Selena', 'Pinkman', '987 654 321', 'walter@white.com'),
+(18, 'Skyler', 'Musk', '+1 111 111 111', 'walter@white.com'),
+(19, 'Jesse', 'Mickiewicz', '987 654 321', 'walter@white.com'),
+(20, 'Walter', 'Gates', '666666666', 'walter@white.com'),
+(21, 'Elon', 'White', '987 654 321', 'walter@white.com'),
+(22, 'Elon', 'Pinkman', '+00 000 000 000', 'walter@white.com'),
+(23, 'Elon', 'White', '+48 123 456 789', 'walter@white.com');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `message`
+--
+
+CREATE TABLE `message` (
+  `message_id` int(11) NOT NULL,
+  `full_name` varchar(64) COLLATE utf8mb4_polish_ci NOT NULL,
+  `email` varchar(64) COLLATE utf8mb4_polish_ci NOT NULL,
+  `message` text COLLATE utf8mb4_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+
+--
+-- Zrzut danych tabeli `message`
+--
+
+INSERT INTO `message` (`message_id`, `full_name`, `email`, `message`) VALUES
+(1, 'Full name', 'email@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus fermentum laoreet. Etiam accumsan molestie nunc, a bibendum tellus posuere ac. Aliquam semper, lectus eu convallis gravida, velit sem viverra sem, sit amet ultricies metus lorem consequat nisl. Maecenas dictum aliquam eleifend. Donec elit justo, molestie in faucibus vel, accumsan at nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed lorem id augue pharetra ultrices. Aliquam molestie risus sapien, sit amet tempus dui vulputate a. Nam ac lacinia orci. Integer vel porttitor nunc. Ut scelerisque risus eget tellus rhoncus, vitae blandit ipsum laoreet.\r\n\r\nIn facilisis tellus sapien, sed consectetur nunc eleifend at. Vivamus quam turpis, finibus sed magna congue, fringilla molestie orci. Nunc tempor porttitor cursus. Ut suscipit, tortor sed dictum feugiat, risus augue blandit turpis, ac dictum justo ipsum eu purus. Nulla eu nunc tristique, congue purus quis, sodales sem. Vestibulum malesuada, diam at porttitor feugiat, ante felis consequat risus, ut mollis nunc erat vitae libero. Pellentesque vitae risus ut lorem finibus varius in a sapien. Fusce eleifend erat sapien, ut dapibus mauris porttitor vel. Vivamus vestibulum auctor gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at ultricies lorem. Nulla lobortis tortor quis sem sagittis auctor. Praesent vitae urna commodo, cursus dolor non, feugiat sem.\r\n\r\nSuspendisse nec auctor enim. Pellentesque bibendum, orci in suscipit volutpat, ante purus gravida mi, nec auctor lacus est nec turpis. Aliquam faucibus euismod tellus, eget eleifend purus ultrices et. Aenean metus turpis, aliquam congue odio sed, lacinia varius enim. Vivamus et malesuada nisl. In hac habitasse platea dictumst. Cras vitae tortor ac mauris consequat gravida ac eu purus. Integer egestas lacus nisi, et lacinia lectus dignissim ac. Quisque lacinia mauris quis tellus interdum laoreet. Duis a viverra dui. Integer ut efficitur mi, ut gravida nunc. Sed tempor, massa in efficitur cursus, ipsum nibh dignissim felis, nec ornare eros dolor eu mauris. Etiam venenatis pharetra est quis varius. Ut metus sapien, semper sit amet sapien ac, commodo mollis odio. Duis nec leo rutrum, elementum metus non, convallis nisi.\r\n\r\nAliquam erat volutpat. Curabitur eget vestibulum justo. Maecenas vitae vulputate turpis. Fusce pellentesque tempus leo in ullamcorper. Vestibulum metus leo, mollis sit amet venenatis eu, lacinia a justo. Donec at gravida felis. Duis dictum, magna ac fringilla porttitor, leo quam aliquam metus, vel interdum neque turpis at ipsum. Pellentesque molestie nisi dolor, vel consequat mi egestas eget. Phasellus non pretium sapien. Vivamus convallis venenatis iaculis. Proin nisl enim, semper in vestibulum eu, volutpat et arcu. Curabitur a ornare augue. Integer sed leo aliquet, molestie ipsum vel, sodales risus. Aliquam imperdiet scelerisque justo, ut consequat ante tincidunt in. Nunc rutrum ultrices sem id laoreet. Aliquam maximus id urna et porta.'),
+(2, 'Full name', 'email3@email.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus fermentum laoreet. Etiam accumsan molestie nunc, a bibendum tellus posuere ac. Aliquam semper, lectus eu convallis gravida, velit sem viverra sem, sit amet ultricies metus lorem consequat nisl. Maecenas dictum aliquam eleifend. Donec elit justo, molestie in faucibus vel, accumsan at nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent sed lorem id augue pharetra ultrices. Aliquam molestie risus sapien, sit amet tempus dui vulputate a. Nam ac lacinia orci. Integer vel porttitor nunc. Ut scelerisque risus eget tellus rhoncus, vitae blandit ipsum laoreet.\r\n\r\nIn facilisis tellus sapien, sed consectetur nunc eleifend at. Vivamus quam turpis, finibus sed magna congue, fringilla molestie orci. Nunc tempor porttitor cursus. Ut suscipit, tortor sed dictum feugiat, risus augue blandit turpis, ac dictum justo ipsum eu purus. Nulla eu nunc tristique, congue purus quis, sodales sem. Vestibulum malesuada, diam at porttitor feugiat, ante felis consequat risus, ut mollis nunc erat vitae libero. Pellentesque vitae risus ut lorem finibus varius in a sapien. Fusce eleifend erat sapien, ut dapibus mauris porttitor vel. Vivamus vestibulum auctor gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at ultricies lorem. Nulla lobortis tortor quis sem sagittis auctor. Praesent vitae urna commodo, cursus dolor non, feugiat sem.\r\n\r\nSuspendisse nec auctor enim. Pellentesque bibendum, orci in suscipit volutpat, ante purus gravida mi, nec auctor lacus est nec turpis. Aliquam faucibus euismod tellus, eget eleifend purus ultrices et. Aenean metus turpis, aliquam congue odio sed, lacinia varius enim. Vivamus et malesuada nisl. In hac habitasse platea dictumst. Cras vitae tortor ac mauris consequat gravida ac eu purus. Integer egestas lacus nisi, et lacinia lectus dignissim ac. Quisque lacinia mauris quis tellus interdum laoreet. Duis a viverra dui. Integer ut efficitur mi, ut gravida nunc. Sed tempor, massa in efficitur cursus, ipsum nibh dignissim felis, nec ornare eros dolor eu mauris. Etiam venenatis pharetra est quis varius. Ut metus sapien, semper sit amet sapien ac, commodo mollis odio. Duis nec leo rutrum, elementum metus non, convallis nisi.\r\n\r\nAliquam erat volutpat. Curabitur eget vestibulum justo. Maecenas vitae vulputate turpis. Fusce pellentesque tempus leo in ullamcorper. Vestibulum metus leo, mollis sit amet venenatis eu, lacinia a justo. Donec at gravida felis. Duis dictum, magna ac fringilla porttitor, leo quam aliquam metus, vel interdum neque turpis at ipsum. Pellentesque molestie nisi dolor, vel consequat mi egestas eget. Phasellus non pretium sapien. Vivamus convallis venenatis iaculis. Proin nisl enim, semper in vestibulum eu, volutpat et arcu. Curabitur a ornare augue. Integer sed leo aliquet, molestie ipsum vel, sodales risus. Aliquam imperdiet scelerisque justo, ut consequat ante tincidunt in. Nunc rutrum ultrices sem id laoreet. Aliquam maximus id urna et porta.');
 
 -- --------------------------------------------------------
 
@@ -113,7 +142,18 @@ INSERT INTO `reservation` (`reservation_id`, `guest_id`, `start_date`, `end_date
 (14, 14, '2023-03-17', '2023-03-19', 1, 2, '1300', '2023-03-16 20:54:03'),
 (15, 1, '2023-03-17', '2023-03-19', 1, 6, '1300', '2023-03-16 20:56:56'),
 (16, 1, '2023-03-17', '2023-03-19', 1, 7, '1300', '2023-03-16 20:57:08'),
-(17, 1, '2023-03-17', '2023-03-17', 1, 4, '650', '2023-03-16 21:24:19');
+(17, 1, '2023-03-17', '2023-03-17', 1, 4, '650', '2023-03-16 21:24:19'),
+(19, 1, '2023-07-01', '2023-07-31', 9, 101, '150000', '2023-03-18 16:39:57'),
+(20, 1, '2023-04-01', '2023-04-01', 2, 11, '650', '2023-03-19 16:16:58'),
+(21, 1, '2023-04-01', '2023-04-01', 2, 12, '650', '2023-03-19 16:18:09'),
+(22, 16, '2023-04-01', '2023-04-01', 3, 13, '650', '2023-03-19 16:18:26'),
+(23, 17, '2023-04-01', '2023-04-01', 3, 14, '650', '2023-03-19 16:19:49'),
+(24, 18, '2023-04-01', '2023-04-01', 3, 15, '650', '2023-03-19 16:20:53'),
+(25, 19, '2023-04-01', '2023-04-01', 3, 16, '650', '2023-03-19 16:21:05'),
+(26, 20, '2023-04-01', '2023-04-01', 3, 17, '650', '2023-03-19 16:21:19'),
+(27, 21, '2023-04-01', '2023-04-01', 3, 18, '650', '2023-03-19 16:21:32'),
+(28, 22, '2023-04-01', '2023-04-01', 2, 19, '650', '2023-03-19 16:21:42'),
+(29, 23, '2023-04-01', '2023-04-01', 2, 20, '650', '2023-03-19 16:21:52');
 
 -- --------------------------------------------------------
 
@@ -280,9 +320,9 @@ INSERT INTO `room_type` (`room_id`, `name`, `guests`, `beds`, `bathrooms`, `size
 --
 
 --
--- Indeksy dla tabeli `accounts`
+-- Indeksy dla tabeli `account`
 --
-ALTER TABLE `accounts`
+ALTER TABLE `account`
   ADD PRIMARY KEY (`account_id`);
 
 --
@@ -290,6 +330,12 @@ ALTER TABLE `accounts`
 --
 ALTER TABLE `guest`
   ADD PRIMARY KEY (`guest_id`);
+
+--
+-- Indeksy dla tabeli `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`message_id`);
 
 --
 -- Indeksy dla tabeli `reservation`
@@ -318,22 +364,28 @@ ALTER TABLE `room_type`
 --
 
 --
--- AUTO_INCREMENT dla tabeli `accounts`
+-- AUTO_INCREMENT dla tabeli `account`
 --
-ALTER TABLE `accounts`
+ALTER TABLE `account`
   MODIFY `account_id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `guest`
 --
 ALTER TABLE `guest`
-  MODIFY `guest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `guest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT dla tabeli `message`
+--
+ALTER TABLE `message`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT dla tabeli `room`
